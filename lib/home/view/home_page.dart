@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hiih/home/component/header.dart';
-import 'package:hiih/home/component/menu.dart';
+import 'package:ttgt/home/component/header.dart';
+import 'package:ttgt/home/component/menu.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -14,9 +14,15 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(title: const Text('hehe')),
       body: Container(
-          child: Column(
-        children: [Header(), const SizedBox(height: 30), Menu()],
-      )),
+        child: Menu(),
+        // child: Column(
+        //   children: [
+        //     // Header(),
+        //     // const SizedBox(height: 30),
+        //     Flexible(child: Menu())
+        //   ],
+        // )
+      ),
     );
   }
 }

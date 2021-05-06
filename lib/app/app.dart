@@ -7,9 +7,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:hiih/counter/counter.dart';
-import 'package:hiih/home/view/home_page.dart';
-import 'package:hiih/l10n/l10n.dart';
+import 'package:ttgt/counter/counter.dart';
+import 'package:ttgt/home/view/home_page.dart';
+import 'package:ttgt/l10n/l10n.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -26,6 +26,7 @@ class App extends StatelessWidget {
         GlobalMaterialLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }

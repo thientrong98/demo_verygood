@@ -1,4 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:ttgt/widget/card_image_and_text.dart';
 
 class Menu extends StatefulWidget {
   @override
@@ -8,6 +10,72 @@ class Menu extends StatefulWidget {
 class _MenuState extends State<Menu> {
   @override
   Widget build(BuildContext context) {
-    return Text("hehe");
+    return Container(
+      child: GridView.count(crossAxisCount: 4, children: loadComponent()),
+    );
+  }
+
+  List<Widget> loadComponent() {
+    List<String> _listContent = [
+      'Bản đồ',
+      'Camera',
+      'Cảnh báo',
+      'Phản ánh',
+      'Tin tức',
+      'Tra cứu',
+      'Go!Bus',
+      'Tra cứu',
+      'Go!Bus',
+      'Giới thiệu'
+    ];
+    List<Color> _listColor = [
+      Colors.green,
+      Colors.blue,
+      Colors.red,
+      Colors.purple,
+      Colors.orange,
+      Colors.purple.withOpacity(0.5),
+      Colors.green.withOpacity(0.5),
+      Colors.purple.withOpacity(0.5),
+      Colors.green.withOpacity(0.5),
+      Colors.blueGrey
+    ];
+    List<Widget> componentCell = [];
+    int index = 10;
+    if (index > 8) {
+      for (int i = 0; i < 7; i++) {
+        componentCell.add(Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
+          color: _listColor[i],
+          child: InkWell(
+            child: CardImageAndText(
+              content: _listContent[i],
+            ),
+            onTap: () {
+              // print(i);
+            },
+          ),
+        ));
+      }
+      componentCell.add(Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        color: _listColor[8],
+        child: InkWell(
+          child: CardImageAndText(
+            content: "More",
+          ),
+          onTap: () {
+            // print(i);
+            // MainController.changeLayout(context, 8);
+          },
+        ),
+      ));
+    }
+
+    return componentCell;
   }
 }
