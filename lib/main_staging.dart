@@ -12,8 +12,10 @@ import 'package:flutter/widgets.dart';
 import 'package:bloc/bloc.dart';
 import 'package:ttgt/app/app.dart';
 import 'package:ttgt/app/app_bloc_observer.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  await Firebase.initializeApp();
   Bloc.observer = AppBlocObserver();
   FlutterError.onError = (details) {
     log(details.exceptionAsString(), stackTrace: details.stack);

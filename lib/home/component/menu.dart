@@ -1,5 +1,9 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
+import 'package:ttgt/home/controller/menu_controller.dart';
 import 'package:ttgt/widget/card_image_and_text.dart';
 
 class Menu extends StatefulWidget {
@@ -8,6 +12,15 @@ class Menu extends StatefulWidget {
 }
 
 class _MenuState extends State<Menu> {
+  final Future<FirebaseApp> _fbApp = Firebase.initializeApp();
+  final MenuController menuController = Get.put(MenuController());
+
+  @override
+  void initState() {
+    menuController.getMenu();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(

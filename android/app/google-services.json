@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "403375715630",
+    "firebase_url": "https://mytrans-dev.firebaseio.com",
+    "project_id": "mytrans-dev",
+    "storage_bucket": "mytrans-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403375715630:android:05e6ad822cd02e24e636bf",
+        "android_client_info": {
+          "package_name": "com.example.ttgt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403375715630-24j9sp9j32fufnjvi99pnbgroqavmn3v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANTrzh3UkVqqyaUn0kLPtHRfBWrlc1lZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403375715630-24j9sp9j32fufnjvi99pnbgroqavmn3v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
