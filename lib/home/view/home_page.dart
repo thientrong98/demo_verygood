@@ -11,29 +11,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // @override
-  // Widget build(BuildContext context) {
-  //   SystemChrome.setSystemUIOverlayStyle(
-  //       SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-  //   return Scaffold(
-  //       body: SafeArea(
-  //     child: Container(
-  //       child: Column(
-  //         children: [
-  //           Container(
-  //             height: 200,
-  //           ),
-  //           Menu(),
-  //           Text(
-  //             "Tiêu điểm",
-  //             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-  //           ),
-  //           HotNews()
-  //         ],
-  //       ),
-  //     ),
-  //   ));
-  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,13 +18,58 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Menu(),
+              SizedBox(height: 10),
+              Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    _iconAndText("Nhà", 'assets/images/ic_home.png',
+                        "Có vẻ bạn đang ở nhà"),
+                    _iconAndText("Công ty", 'assets/images/ic_office.png',
+                        "Có vẻ bạn đang ở nhà"),
+                    _iconAndText("Người yêu", 'assets/images/ic_lover.png',
+                        "Có vẻ bạn đang ở nhà")
+                  ],
+                ),
+              ),
               HotNews(),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget _iconAndText(String text, String icon, String content) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            // Icon(icon),
+            Image.asset(
+              icon,
+              width: 48,
+              height: 48,
+            ),
+            SizedBox(width: 5),
+            Text(
+              text,
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 70),
+          child: Text(
+            content,
+            style: TextStyle(fontSize: 16),
+          ),
+        ),
+      ],
     );
   }
 }

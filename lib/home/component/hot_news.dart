@@ -49,11 +49,22 @@ class _HotNewsState extends State<HotNews> {
                           child: InkWell(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: CardHotNew(
-                                title:
-                                    hotNewController.hotNewsModel[index].title,
-                                subtitle: hotNewController
-                                    .hotNewsModel[index].subtitle,
+                              child: Column(
+                                children: [
+                                  Icon(
+                                    Icons.remove_circle,
+                                    color: Colors.blue,
+                                  ),
+                                  SizedBox(height: 10),
+                                  SingleChildScrollView(
+                                    child: CardHotNew(
+                                      title: hotNewController
+                                          .hotNewsModel[index].title,
+                                      subtitle: hotNewController
+                                          .hotNewsModel[index].subtitle,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                             onTap: () {

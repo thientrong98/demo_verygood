@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 
 class CardImageAndText extends StatefulWidget {
   final String content;
-  // final String image;
+  final String image;
 
-  const CardImageAndText({Key? key, required this.content}) : super(key: key);
+  const CardImageAndText({Key? key, required this.content, required this.image})
+      : super(key: key);
 
   @override
   _CardImageAndTextState createState() => _CardImageAndTextState();
@@ -17,11 +18,15 @@ class _CardImageAndTextState extends State<CardImageAndText> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(Icons.ac_unit, color: Colors.white),
+        // Icon(Icons.map, color: Colors.black),
+        Image.asset(
+          widget.image,
+          height: 48,
+        ),
         SizedBox(height: 10),
         Text(
           widget.content,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.black),
         ),
       ],
     );

@@ -40,10 +40,11 @@ class MenuController extends GetxController {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15.0),
           ),
-          color: Colors.green[300],
+          // color: Colors.green[300],
           child: InkWell(
             child: CardImageAndText(
               content: 'More',
+              image: "assets/images/ic_more.png",
             ),
             onTap: () {
               // componentCell.length = 5;
@@ -65,14 +66,15 @@ class MenuController extends GetxController {
     var splitColor = color.split(',');
 
     componentCell.add(Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15.0),
-      ),
-      color: Color.fromARGB(int.parse(splitColor[0]), int.parse(splitColor[1]),
-          int.parse(splitColor[2]), int.parse(splitColor[3])),
+      // shape: RoundedRectangleBorder(
+      //   borderRadius: BorderRadius.circular(15.0),
+      // ),
+      // color: Color.fromARGB(int.parse(splitColor[0]), int.parse(splitColor[1]),
+      //     int.parse(splitColor[2]), int.parse(splitColor[3])),
       child: InkWell(
         child: CardImageAndText(
           content: title,
+          image: "assets/images/ic_map.jpg",
         ),
         onTap: () {
           // print(i);

@@ -18,16 +18,11 @@ class _CardHotNewState extends State<CardHotNew> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Icon(
-          Icons.remove_circle,
-          color: Colors.blue,
-        ),
-        SizedBox(height: 10),
         Text(
           widget.title != null ? widget.title : "",
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
-        // SizedBox(height: 5),
+        SizedBox(height: 5),
         Text(
           widget.subtitle != null ? widget.subtitle : "",
           style: TextStyle(color: Colors.grey),
