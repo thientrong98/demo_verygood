@@ -17,10 +17,7 @@ class _CardImageAndTextState extends State<CardImageAndText> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Icon(
-          Icons.ac_unit,
-          color: Colors.white,
-        ),
+        Icon(Icons.ac_unit, color: Colors.white),
         SizedBox(height: 10),
         Text(
           widget.content,

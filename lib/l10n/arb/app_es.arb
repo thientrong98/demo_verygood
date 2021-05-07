@@ -1,6 +1,7 @@
 {
     "@@locale": "es",
     "counterAppBarTitle": "Contador",
+    "hotNewsDetailAppBarTitle": "Tin tức tiêu điểm",
     "@counterAppBarTitle": {
         "description": "Texto mostrado en la AppBar de la página del contador"
     }
